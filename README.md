@@ -3,14 +3,13 @@
 # Patient Registration App
 It is an application that allows the registration of patients and the sending of a registration confirmation via email. 
 The patient's record along with their document photo is saved in a database.
+
 <br>
 
 ## Screenshots
 
 ![Registration](public/img/readme/screenshots/registration.png)
 ![Registration Success](public/img/readme/screenshots/registration-success.png)
-
-<p align="right">(<a href="#top">volver a inicio</a>)</p>
 
 <br>
 
@@ -19,8 +18,6 @@ The patient's record along with their document photo is saved in a database.
 * [NPM 8.0](https://docs.npmjs.com/getting-started) or higher
 * [MySQL](https://www.mysql.com/downloads/)
 * [Composer 2.1](https://getcomposer.org/download/) or higher
-
-<p align="right">(<a href="#top">volver a inicio</a>)</p>
 
 <br>
 
@@ -87,8 +84,6 @@ The patient's record along with their document photo is saved in a database.
 
 Now the application will be running on localhost: http://localhost/
 
-<p align="right">(<a href="#top">volver a inicio</a>)</p>
-
 <br>
 
 ## Starting and Stopping Containers
@@ -112,15 +107,11 @@ To eliminate volumes
 ./vendor/bin/sail down -v
 ```
 
-<p align="right">(<a href="#top">volver a inicio</a>)</p>
-
 <br>
 
 ## Built with:
 | [![Laravel 10](public/img/readme/logos/laravel-2.svg)](https://laravel.com/) | [![PHP](public/img/readme/logos/php-1.svg)](https://www.php.net/) | [![MySQL](public/img/readme/logos/mysql-2.svg)](https://www.mysql.com/) | [![Composer](public/img/readme/logos/composer.svg)](https://getcomposer.org/) | [![Sass](public/img/readme/logos/sass-1.svg)](https://sass-lang.com/) | [![jQuery](public/img/readme/logos/jquery-1.svg)](https://jquery.com/) | [![Bootstrap](public/img/readme/logos/bootstrap-5-1.svg)](https://getbootstrap.com/) |
 |------------------------------------------------------------------------------|-------------------------------------------------------------------|-------------------------------------------------------------------------|-------------------------------------------------------------------------------|-----------------------------------------------------------------------|------------------------------------------------------------------------|--------------------------------------------------------------------------------------|
-
-<p align="right">(<a href="#top">volver a inicio</a>)</p>
 
 <br>
 
