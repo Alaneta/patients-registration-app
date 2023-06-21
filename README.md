@@ -15,7 +15,10 @@ The patient's record along with their document photo is saved in a database.
 <br>
 
 ## Requirements
-* [Composer 2.1](https://getcomposer.org/download/) o superior
+* [PHP 8.0](https://www.php.net/downloads.php) or higher
+* [NPM 8.0](https://docs.npmjs.com/getting-started)
+* [MySQL](https://www.mysql.com/downloads/)
+* [Composer 2.1](https://getcomposer.org/download/) or higher
 
 <p align="right">(<a href="#top">volver a inicio</a>)</p>
 
