@@ -1,8 +1,11 @@
 @extends('layouts.base_layout')
 
 @section('content')
-    <form action="{{ route('storePatient') }}" method="POST" enctype="multipart/form-data" id="patientForm">
+        <form action="{{ route('storePatient') }}" method="POST" enctype="multipart/form-data" id="patientForm">
         @csrf
+        <div class="logo">
+            <img src="{{ asset('img/logo.svg') }}" alt="Logo">
+        </div>
         <div class="card mx-auto my-5">
             <div class="card-body">
                 <h3 class="card-title text-center">Patient Registration</h3>

@@ -51,9 +51,21 @@ body {
 .card {
     width: 30rem;
     background-color: rgb(55 67 81);
+
+    @media (max-width: 480px) {
+        width: 100%;
+    }
 }
 
 h3.card-title {
     color: white;
     font-weight: 700;
+}
+
+/*--------------------------------------------------------------
+# Logo
+--------------------------------------------------------------*/
+.logo {
+    text-align: center;
+    margin-top: 25px;
 }

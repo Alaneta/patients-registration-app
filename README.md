@@ -1,66 +1,129 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+<div id="top"></div>
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+# Patient Registration App
+It is an application that allows the registration of patients and the sending of a registration confirmation via email. 
+The patient's record along with their document photo is saved in a database.
+<br>
 
-## About Laravel
+## Screenshots
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+![Registration](public/img/readme/screenshots/registration.png)
+![Registration Success](public/img/readme/screenshots/registration-success.png)
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+<p align="right">(<a href="#top">volver a inicio</a>)</p>
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+<br>
 
-## Learning Laravel
+## Requirements
+* [Composer 2.1](https://getcomposer.org/download/) o superior
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+<p align="right">(<a href="#top">volver a inicio</a>)</p>
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+<br>
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 2000 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+## Installation (Linux)
+1. Clone the app repository to the directory of your choice
+   ```sh
+   git clone git@github.com:Alaneta/patients-registration-app.git .
+   ```
 
-## Laravel Sponsors
+2. Instalar las dependencias de la aplicación
+   ```sh
+   composer install
+   ```
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
+3. Install application dependencies
+   ```sh
+   composer update
+   ```
 
-### Premium Partners
+4. Create the environment variables file
+   ```sh
+   cp .env.example .env
+   ```
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[Many](https://www.many.co.uk)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[OP.GG](https://op.gg)**
-- **[WebReinvent](https://webreinvent.com/?utm_source=laravel&utm_medium=github&utm_campaign=patreon-sponsors)**
-- **[Lendio](https://lendio.com)**
+5. Replace the database connection and mail provider information in the .env file
 
-## Contributing
+   You can get and email testing account from https://mailtrap.io/
+   ```sh
+    DB_CONNECTION=mysql
+    DB_HOST=mysql
+    DB_PORT=3306
+    DB_DATABASE=patients_registration_app
+    DB_USERNAME=sail
+    DB_PASSWORD=password
+   
+    MAIL_MAILER=smtp
+    MAIL_HOST=smtp.mailtrap.io
+    MAIL_PORT=2525
+    MAIL_USERNAME={your_mailtrap_username}
+    MAIL_PASSWORD={yoor_mailtrap_password}
+    MAIL_ENCRYPTION=tls
+   ```
+   The default username and password for the database are:
+   > usuario: sail
+   > contraseña: password
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+6. Generate the APP_KEY env variable
+   ```sh
+   php artisan key:generate
+   ```
 
-## Code of Conduct
+7. Start containers in unattended mode
+    ```sh
+    ./vendor/bin/sail up -d
+    ```
+8. Install required dependencies from node
+    ```sh
+    ./vendor/bin/sail npm install
+    ```
+9. Generate database tables from migrations
+    ```sh
+    ./vendor/bin/sail php artisan migrate
+    ```
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+Now the application will be running on localhost: http://localhost/
 
-## Security Vulnerabilities
+<p align="right">(<a href="#top">volver a inicio</a>)</p>
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+<br>
 
-## License
+## Starting and Stopping Containers
+To start all containers
+```sh
+./vendor/bin/sail up
+```
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+To start all containers in unattended mode
+```sh
+./vendor/bin/sail up -d
+```
+
+To stop all containers
+```sh
+./vendor/bin/sail stop
+```
+
+To eliminate volumes
+```sh
+./vendor/bin/sail down -v
+```
+
+<p align="right">(<a href="#top">volver a inicio</a>)</p>
+
+<br>
+
+## Built with:
+| [![Laravel 10](public/img/readme/logos/laravel-2.svg)](https://laravel.com/) | [![PHP](public/img/readme/logos/php-1.svg)](https://www.php.net/) | [![MySQL](public/img/readme/logos/mysql-2.svg)](https://www.mysql.com/) | [![Composer](public/img/readme/logos/composer.svg)](https://getcomposer.org/) | [![Sass](public/img/readme/logos/sass-1.svg)](https://sass-lang.com/) | [![jQuery](public/img/readme/logos/jquery-1.svg)](https://jquery.com/) | [![Bootstrap](public/img/readme/logos/bootstrap-5-1.svg)](https://getbootstrap.com/) |
+|------------------------------------------------------------------------------|-------------------------------------------------------------------|-------------------------------------------------------------------------|-------------------------------------------------------------------------------|-----------------------------------------------------------------------|------------------------------------------------------------------------|--------------------------------------------------------------------------------------|
+
+<p align="right">(<a href="#top">volver a inicio</a>)</p>
+
+<br>
+
+## Author
+* **Alan Camussi** - Full Stack Developer - [Alaneta](https://github.com/Alaneta)
+
+<p align="right">(<a href="#top">volver a inicio</a>)</p>
+
+<br>
