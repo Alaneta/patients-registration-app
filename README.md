@@ -16,7 +16,7 @@ The patient's record along with their document photo is saved in a database.
 
 ## Requirements
 * [PHP 8.0](https://www.php.net/downloads.php) or higher
-* [NPM 8.0](https://docs.npmjs.com/getting-started)
+* [NPM 8.0](https://docs.npmjs.com/getting-started) or higher
 * [MySQL](https://www.mysql.com/downloads/)
 * [Composer 2.1](https://getcomposer.org/download/) or higher
 
@@ -27,7 +27,7 @@ The patient's record along with their document photo is saved in a database.
 ## Installation (Linux)
 1. Clone the app repository to the directory of your choice
    ```sh
-   git clone git@github.com:Alaneta/patients-registration-app.git .
+   git clone git@github.com:Alaneta/patients-registration-app.git
    ```
 
 2. Instalar las dependencias de la aplicación
