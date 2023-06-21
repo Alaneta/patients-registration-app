@@ -1,8 +1,12 @@
 <div id="top"></div>
 
 # Patient Registration App
-It is an application that allows the registration of patients and the sending of a registration confirmation via email. 
-The patient's record along with their document photo is saved in a database.
+This is an application that allows the registration of patients and the sending of a registration confirmation via email.
+It is also prepared with a beta implementation for SMS notification. These notifications are sent asynchronously via a 
+queue of jobs. The patient's record is saved in a database and the patients document photo is saved in local storage but
+if this was a real project, it is well known that the best way is to save all photos in an AWS S3 bucket.
+
+The app was built using Laravel 10 Framework.
 
 <br>
 
@@ -10,6 +14,7 @@ The patient's record along with their document photo is saved in a database.
 
 ![Registration](public/img/readme/screenshots/registration.png)
 ![Registration Success](public/img/readme/screenshots/registration-success.png)
+![Registration Email](public/img/readme/screenshots/registration-email.png)
 
 <br>
 
