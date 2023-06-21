@@ -20,7 +20,6 @@ return new class extends Migration
             $table->string('name', 60);
             $table->bigInteger('size');
             $table->softDeletes();
-            $table->timestamps();
         });
     }
 
