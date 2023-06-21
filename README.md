@@ -29,20 +29,17 @@ The patient's record along with their document photo is saved in a database.
 
 2. Instalar las dependencias de la aplicación
    ```sh
+   cd patients-registration-app/
    composer install
-   ```
-
-3. Install application dependencies
-   ```sh
    composer update
    ```
 
-4. Create the environment variables file
+3. Create the environment variables file
    ```sh
    cp .env.example .env
    ```
 
-5. Replace the database connection and mail provider information in the .env file
+4. Replace the database connection and mail provider information in the .env file
 
    You can get and email testing account from https://mailtrap.io/
    ```sh
@@ -64,20 +61,20 @@ The patient's record along with their document photo is saved in a database.
    > usuario: sail
    > contraseña: password
 
-6. Generate the APP_KEY env variable
+5. Generate the APP_KEY env variable
    ```sh
    php artisan key:generate
    ```
 
-7. Start containers in unattended mode
+6. Start containers in unattended mode
     ```sh
     ./vendor/bin/sail up -d
     ```
-8. Install required dependencies from node
+7. Install required dependencies from node
     ```sh
     ./vendor/bin/sail npm install
     ```
-9. Generate database tables from migrations
+8. Generate database tables from migrations
     ```sh
     ./vendor/bin/sail php artisan migrate
     ```
