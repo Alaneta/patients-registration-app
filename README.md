@@ -13,6 +13,7 @@ The app was built using Laravel 10 Framework.
 ## Screenshots
 
 ![Registration](public/img/readme/screenshots/registration.png)
+![Registration Data](public/img/readme/screenshots/registration-data.png)
 ![Registration Success](public/img/readme/screenshots/registration-success.png)
 ![Registration Email](public/img/readme/screenshots/registration-email.png)
 
